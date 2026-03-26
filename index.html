@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VedWear</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+    <p>Free Shipping on Orders Over $50</p>
+</div>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="left">
+        <h1>Fit-Wear</h1>
+        <p>Minimal Fashion Store</p>
+
+        <input type="text" id="search" placeholder="Search..." onkeyup="searchProducts()">
+
+        <div class="categories">
+            <h4>Categories</h4>
+            <ul>
+                <li>Tees</li>
+                <li>Shirts</li>
+                <li>Jackets</li>
+                <li>Hoodies</li>
+                <li>Jeans</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right" id="productList">
+
+        <div class="product">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.ZWZGLp0qHp6IGxHyPuNryAHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3">
+            <h3>Black Hoodie</h3>
+            <p>$40</p>
+        </div>
+
+        <div class="product">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.Io3O6qSJ4tMRTq554ohWxAHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3">
+            <h3>White T-Shirt</h3>
+            <p>$25</p>
+        </div>
+
+        <div class="product">
+            <img src="https://www.apetogentleman.com/wp-content/uploads/2019/03/wear-denim-jacket-men-2.jpg">
+            <h3>Denim Jacket</h3>
+            <p>$70</p>
+        </div>
+
+        <div class="product">
+            <img src="https://www.bing.com/th/id/OIP.lmFk6gxtXkiXEZeGKaWOHwHaJQ?w=188&h=235&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2">
+            <h3>Grey Sweatshirt</h3>
+            <p>$35</p>
+        </div>
+
+        <div class="product">
+            <img src="https://image.menswearhouse.com/is/image/TMW/TMW_21P8_35_SILVER_JEANS_JEANS_LIGHT_WASH_MAIN?imPolicy=pgp-sm">
+            <h3>Blue Jeans</h3>
+            <p>$60</p>
+        </div>
+
+        <div class="product">
+            <img src="https://th.bing.com/th/id/OIP.P4jSLU8ioyn79A_uJEoogAHaJ4?w=192&h=256&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3">
+            <h3>Casual Shirt</h3>
+            <p>$45</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div>
+        <p><strong>VedWear</strong></p>
+        <p>Modern fashion for everyday style.</p>
+    </div>
+
+    <div>
+        <p><strong>Links</strong></p>
+        <p>Home</p>
+        <p>Shop</p>
+        <p>Contact</p>
+    </div>
+
+    <div>
+        <p><strong>Follow</strong></p>
+        <p>Instagram</p>
+        <p>Twitter</p>
+    </div>
+</footer>
+
+<script>
+function searchProducts() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let products = document.getElementsByClassName("product");
+
+    for (let i = 0; i < products.length; i++) {
+        let name = products[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        products[i].style.display = name.includes(input) ? "" : "none";
+    }
+}
+</script>
+
+</body>
+</html>

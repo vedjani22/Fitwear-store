@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9fafb;
+}
+
+/* Top Bar */
+.topbar {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Layout */
+.container {
+    display: flex;
+}
+
+/* LEFT PANEL */
+.left {
+    width: 30%;
+    height: 100vh;
+    background: black;
+    color: white;
+    padding: 40px;
+    position: sticky;
+    top: 0;
+}
+
+.left h1 {
+    font-size: 40px;
+}
+
+.left p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.left input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Categories */
+.categories {
+    margin-top: 30px;
+}
+
+.categories h4 {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    padding: 8px 0;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.categories li:hover {
+    color: white;
+}
+
+/* RIGHT PANEL */
+.right {
+    width: 70%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Product */
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-8px);
+}
+
+/* Image */
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+.product p {
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.footer div p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
